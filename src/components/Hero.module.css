@@ -1,0 +1,298 @@
+.heroSection {
+  padding-top: 160px;
+  padding-bottom: 2rem;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.heroBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  background-color: var(--bg-mint);
+}
+
+.heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.05);
+  opacity: 0.85;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(240, 253, 249, 0.3));
+  pointer-events: none;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 1024px) {
+  .heroGrid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3rem;
+  }
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.title {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  line-height: 1.15;
+  color: var(--text-dark);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 3.25rem;
+  }
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: var(--text-main);
+  font-weight: 500;
+  max-width: 90%;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 1.125rem;
+  }
+}
+
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.featureIcon {
+  color: var(--primary);
+}
+
+.imageWrapper {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  max-height: 380px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  position: relative;
+  border: 4px solid white;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+}
+
+.formCard {
+  background: white;
+  border-radius: 2rem;
+  padding: 2rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.formHeader h3 {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  font-weight: 800;
+}
+
+.formHeader p {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.leadForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputGroup input,
+.selectInput,
+.dateInput {
+  width: 100%;
+  height: 46px;
+  padding: 0 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background-color: var(--bg-light);
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  color: var(--text-main);
+  transition: all 0.2s;
+  font-weight: 500;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.selectInput {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path শাস্ত্র%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.25rem;
+}
+
+.inputGroup input:focus,
+.selectInput:focus,
+.dateInput:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(2, 129, 116, 0.1);
+  background-color: white;
+}
+
+.radioGroupWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.radioGroupLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.radioGroup {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.radioLabel input[type="radio"] {
+  accent-color: var(--primary);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.submitBtn {
+  width: 100%;
+  height: 56px;
+  font-size: 1.125rem;
+  border-radius: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.stepNum {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(2, 129, 116, 0.1);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepDivider {
+  width: 30px;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 0 0.5rem;
+}
+
+.privacyNote {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 1.5rem;
+  font-weight: 500;
+}

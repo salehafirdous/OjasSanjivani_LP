@@ -1,0 +1,229 @@
+.reviewsSection {
+  background-color: var(--bg-light);
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .contentWrapper {
+    grid-template-columns: 35% 65%;
+    align-items: start;
+    gap: 4rem;
+  }
+}
+
+/* Left Column Styles */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.googleReviewCard {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 28px;
+  border: 1px solid rgba(226, 232, 240, 0.6);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.googleReviewCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-color: rgba(2, 129, 116, 0.3);
+}
+
+.googleScoreBadge {
+  width: 50px;
+  height: 50px;
+  background-color: #f8fafc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.googleScoreRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.googleScore {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.stars {
+  display: flex;
+  gap: 0.125rem;
+}
+
+.googleText {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.featureItem {
+  display: flex;
+  gap: 1rem;
+  padding: 0 0.5rem;
+}
+
+.featureIcon {
+  margin-top: 0.25rem;
+}
+
+.featureText h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.25rem;
+}
+
+.featureText p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+
+/* Right Column Styles */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reviewCard {
+  background: white;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.quoteMark {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 8rem;
+  color: rgba(2, 129, 116, 0.05);
+  font-family: serif;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.reviewText {
+  font-size: 1.125rem;
+  color: var(--text-main);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.authorSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-color);
+  position: relative;
+  z-index: 2;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 0.125rem;
+}
+
+.authorAge {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.tag {
+  background-color: var(--bg-mint);
+  color: var(--primary);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.sliderControls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: -0.5rem;
+}
+
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  border-radius: 9999px;
+  background-color: #e2e8f0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dotActive {
+  width: 24px;
+  background-color: var(--primary);
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: white;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.navBtn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
