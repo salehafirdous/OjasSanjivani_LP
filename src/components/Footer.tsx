@@ -17,9 +17,8 @@ const Footer: React.FC = () => {
         <div className={styles.footerTop}>
           {/* Column 1: Left */}
           <div className={styles.brandColumn}>
-            <div className={styles.logoTitle}>
-              <span className={styles.logoOjas}>OJAS</span>
-              <span className={styles.logoSanjivani}>SANJIVANI</span>
+            <div className={styles.logoContainer}>
+              <img src="/images/logo.png" alt="Ojas Sanjivani Logo" className={styles.footerLogo} />
             </div>
             <p className={styles.brandDesc}>
               Ojas Sanjivani combines the ancient wisdom of Ayurveda with modern Homeopathy to treat chronic diseases and lifestyle disorders from the root, providing safe and permanent recovery.

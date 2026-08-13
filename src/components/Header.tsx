@@ -26,14 +26,7 @@ const Header: React.FC = () => {
       <header className={styles.header}>
         <div className={styles.headerContainer}>
           <a href="/" className={styles.logo}>
-            <img src="/images/logo.svg" alt="Ojas Sanjivani Logo" width={36} height={36} />
-            <div className={styles.logoText}>
-              <div className={styles.logoTitle}>
-                <span className={styles.logoOjas}>OJAS</span>
-                <span className={styles.logoSanjivani}>SANJIVANI</span>
-              </div>
-              <span className={styles.logoSubtitle}>Natural Healthcare</span>
-            </div>
+            <img src="/images/logo.png" alt="Ojas Sanjivani Logo" className={styles.logoImage} />
           </a>
           
           <nav className={styles.desktopNav}>

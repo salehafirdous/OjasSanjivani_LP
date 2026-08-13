@@ -88,64 +88,17 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
 }
 
-.logoText {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.logoTitle {
-  display: flex;
-  align-items: baseline;
-}
-
-.logoOjas {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 800;
-  letter-spacing: 0.025em;
-  color: var(--primary-light);
-  transition: font-size 0.2s ease;
+.logoImage {
+  height: 78px;
+  width: auto;
+  display: block;
 }
 
 @media (max-width: 480px) {
-  .logoOjas {
-    font-size: 1.05rem;
-  }
-}
-
-.logoSanjivani {
-  font-family: var(--font-heading);
-  font-size: 1.25rem;
-  font-weight: 300;
-  letter-spacing: 0.025em;
-  color: var(--secondary);
-  margin-left: 0.25rem;
-  transition: font-size 0.2s ease;
-}
-
-@media (max-width: 480px) {
-  .logoSanjivani {
-    font-size: 1.05rem;
-  }
-}
-
-.logoSubtitle {
-  font-family: var(--font-sans);
-  font-size: 0.55rem;
-  font-weight: 700;
-  letter-spacing: 0.25em;
-  color: var(--text-secondary);
-  text-transform: uppercase;
-  margin-top: 0.125rem;
-}
-
-@media (max-width: 480px) {
-  .logoSubtitle {
-    display: none;
+  .logoImage {
+    height: 56px;
   }
 }
 
