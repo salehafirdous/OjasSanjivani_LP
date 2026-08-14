@@ -3,12 +3,12 @@ import styles from './Stats.module.css';
 
 const statsData = [
   {
-    title: "1.2M+",
+    title: "50K",
     subtitle: "Patients Healed",
     desc: "Successful recovery stories across India"
   },
   {
-    title: "500+",
+    title: "50+",
     subtitle: "Expert Clinicians",
     desc: "Ayurveda & Homeopathy specialists"
   },
