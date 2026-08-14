@@ -47,13 +47,15 @@
   margin-bottom: 1.5rem;
 }
 
-.contactDetails, .infoDetails {
+.contactDetails,
+.infoDetails {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.contactItem, .infoItem {
+.contactItem,
+.infoItem {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
@@ -62,7 +64,8 @@
   line-height: 1.4;
 }
 
-.contactItem svg, .infoItem svg {
+.contactItem svg,
+.infoItem svg {
   flex-shrink: 0;
   margin-top: 0.2rem;
   color: var(--secondary);
@@ -72,7 +75,8 @@
   color: #25d366 !important;
 }
 
-.mapColumn h4, .detailsColumn h4 {
+.mapColumn h4,
+.detailsColumn h4 {
   font-family: var(--font-heading);
   font-size: 1.125rem;
   margin-bottom: 1.25rem;
