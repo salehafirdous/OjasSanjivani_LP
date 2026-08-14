@@ -105,9 +105,9 @@ const Hero: React.FC = () => {
                 <div className={styles.inputGroup}>
                   <select className={styles.selectInput} defaultValue="">
                     <option value="" disabled>Consultation Mode</option>
-                    <option value="online">Online</option>
-                    <option value="clinic">In Clinic visit</option>
-                    <option value="phone">Phone call</option>
+                    {/* <option value="online">In Person</option> */}
+                    <option value="clinic">Video Call</option>
+                    <option value="phone">Phone Call</option>
                   </select>
                 </div>
 
