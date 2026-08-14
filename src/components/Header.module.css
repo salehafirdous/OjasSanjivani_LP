@@ -91,14 +91,14 @@
 }
 
 .logoImage {
-  height: 78px;
+  height: 84px;
   width: auto;
   display: block;
 }
 
 @media (max-width: 480px) {
   .logoImage {
-    height: 56px;
+    height: 62px;
   }
 }
 

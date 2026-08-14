@@ -18,7 +18,7 @@ const statsData = [
     desc: "Lab-tested, certified organic formulations"
   },
   {
-    title: "4.8★",
+    title: "4.9★",
     subtitle: "Patient Satisfaction",
     desc: "Based on 50,000+ verified ratings"
   }

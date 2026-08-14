@@ -34,6 +34,30 @@ const reviews = [
     text: "I was almost on the verge of giving up after failing to get results elsewhere. Consulting the experts here was the best decision. I feel completely rejuvenated and confident.",
     rating: 5,
     tag: "Confidence Restored"
+  },
+  {
+    id: 5,
+    name: "Pooja M.",
+    location: "Hyderabad",
+    text: "I had severe irregular periods and PCOS for 4 years. The homeopathic and ayurvedic combination treatment from Ojas Sanjivani regulated my cycles and cleared my acne in just 4 months. So grateful!",
+    rating: 5,
+    tag: "PCOS Recovery"
+  },
+  {
+    id: 6,
+    name: "Suresh N.",
+    location: "Chennai",
+    text: "Chronic joint pain and arthritis made it hard for me to walk. After starting the herbal formulation and oil therapy recommended by the doctors here, the swelling has reduced by 80% and I can walk pain-free.",
+    rating: 5,
+    tag: "Joint Pain Relief"
+  },
+  {
+    id: 7,
+    name: "Karan S.",
+    location: "Gurgaon",
+    text: "I suffered from premature ejaculation and low vitality for a year, which affected my mental health. Ojas Sanjivani's root-cause treatment restored my stamina and confidence completely. Excellent, discreet care.",
+    rating: 5,
+    tag: "Stamina Boost"
   }
 ];
 

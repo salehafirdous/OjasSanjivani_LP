@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   return (
     <section id="hero" className={styles.heroSection}>
       <div className={styles.heroBackground}>
-        <video 
+        <video
           className={styles.heroVideo}
           src="/videos/hero-telehealth.mp4"
           autoPlay
@@ -48,12 +48,33 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            <div className={styles.imageWrapper}>
-              <img
-                src="/images/hero-telehealth-new.png"
-                alt="Ayurveda Online Consultation Video Call"
-                className={styles.heroImage}
-              />
+            <div className={styles.processWrapper}>
+              <h4 className={styles.processTitle}>Online Consultation Flow:</h4>
+              <div className={styles.processSteps}>
+                <div className={styles.step}>
+                  <div className={styles.stepNumber}>1</div>
+                  <div className={styles.stepContent}>
+                    <h5>Book Free Call</h5>
+                    <p>Fill out the quick form in 1 minute</p>
+                  </div>
+                </div>
+                <div className={styles.stepConnector}>➔</div>
+                <div className={styles.step}>
+                  <div className={styles.stepNumber}>2</div>
+                  <div className={styles.stepContent}>
+                    <h5>Consult Specialist</h5>
+                    <p>Private phone or video consultation</p>
+                  </div>
+                </div>
+                <div className={styles.stepConnector}>➔</div>
+                <div className={styles.step}>
+                  <div className={styles.stepNumber}>3</div>
+                  <div className={styles.stepContent}>
+                    <h5>Start Recovery</h5>
+                    <p>Medicines delivered to your doorstep</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
