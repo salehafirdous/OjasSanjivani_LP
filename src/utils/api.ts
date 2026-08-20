@@ -20,7 +20,7 @@ export async function submitLead(data: LeadData): Promise<any> {
     const baseUrl = envApiUrl.replace(/\/$/, '');
     url = `${baseUrl}/api/leads/create`;
   } else {
-    url = 'https://ojassanjivani.rightbraininfotech.in//api/leads/create';
+    url = 'https://ojassanjivani.rightbraininfotech.in/api/leads/create';
   }
 
   const response = await fetch(url, {

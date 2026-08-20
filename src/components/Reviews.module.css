@@ -1,5 +1,53 @@
 .reviewsSection {
   background-color: var(--bg-light);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sectionBadge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.badgeEn {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+}
+
+.badgeHi {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.hiSubtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.hiBlockText {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-style: normal;
+  margin-top: 0.5rem;
+  line-height: 1.5;
 }
 
 .contentWrapper {
@@ -29,7 +77,7 @@
   padding: 1.5rem;
   border-radius: 28px;
   border: 1px solid rgba(226, 232, 240, 0.6);
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
   display: flex;
   align-items: center;
   gap: 1.25rem;
@@ -38,7 +86,7 @@
 }
 
 .googleReviewCard:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 15px 30px -10px rgba(2, 129, 116, 0.1);
   border-color: rgba(2, 129, 116, 0.3);
 }
 
@@ -101,7 +149,6 @@
   line-height: 1.5;
 }
 
-
 /* Right Column Styles */
 .rightColumn {
   display: flex;
@@ -114,7 +161,7 @@
   padding: 3rem;
   border-radius: 1.5rem;
   border: 1px solid var(--border-color);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -132,15 +179,31 @@
   pointer-events: none;
 }
 
+.testimonialContent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
 .reviewText {
   font-size: 1.125rem;
   color: var(--text-main);
   font-style: italic;
   font-weight: 500;
   line-height: 1.7;
-  margin-bottom: 2rem;
-  position: relative;
-  z-index: 2;
+  margin-bottom: 0.5rem;
+}
+
+.reviewTextHi {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.6;
+  border-left: 2px solid var(--primary);
+  padding-left: 0.75rem;
 }
 
 .authorSection {
@@ -167,9 +230,10 @@
   margin-bottom: 0.125rem;
 }
 
-.authorAge {
+.authorNameHi {
   font-size: 0.85rem;
-  color: var(--text-light);
+  color: var(--text-secondary);
+  font-weight: 600;
 }
 
 .tag {
@@ -179,6 +243,14 @@
   border-radius: 9999px;
   font-size: 0.85rem;
   font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tagSubtext {
+  font-size: 0.7rem;
+  opacity: 0.85;
 }
 
 .sliderControls {

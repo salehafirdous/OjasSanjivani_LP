@@ -30,9 +30,9 @@ const Header: React.FC = () => {
           </a>
           
           <nav className={styles.desktopNav}>
-            <a href="#solutions" className={styles.navLink}>Why OjasSanjivani</a>
-            <a href="#services" className={styles.navLink}>Services</a>
-            <a href="#specialists" className={styles.navLink}>Our Specialist</a>
+            <a href="#why-ojas" className={styles.navLink}>Why OjasSanjivani</a>
+            <a href="#concerns-ayurveda" className={styles.navLink}>Services</a>
+            <a href="#practitioners" className={styles.navLink}>Our Specialist</a>
             <a href="#reviews" className={styles.navLink}>Testimonials</a>
             <a href="#faqs" className={styles.navLink}>FAQs</a>
           </nav>
@@ -55,9 +55,9 @@ const Header: React.FC = () => {
         {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
           <div className={styles.mobileNav}>
-            <a href="#solutions" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Why OjasSanjivani</a>
-            <a href="#services" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Services</a>
-            <a href="#specialists" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Our Specialist</a>
+            <a href="#why-ojas" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Why OjasSanjivani</a>
+            <a href="#concerns-ayurveda" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Services</a>
+            <a href="#practitioners" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Our Specialist</a>
             <a href="#reviews" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>Testimonials</a>
             <a href="#faqs" className={styles.mobileNavLink} onClick={() => setIsMenuOpen(false)}>FAQs</a>
           </div>

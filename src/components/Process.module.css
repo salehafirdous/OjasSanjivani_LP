@@ -3,9 +3,57 @@
   position: relative;
 }
 
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sectionBadge {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.badgeEn {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+}
+
+.badgeHi {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.hiSubtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.hiBlockText {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-style: normal;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
 .timelineContainer {
   position: relative;
-  margin-top: 4.5rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .grid {
@@ -24,8 +72,8 @@
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1.25rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
   }
 }
 
@@ -98,17 +146,32 @@
 }
 
 .stepTitle {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--text-dark);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.15rem;
   line-height: 1.3;
 }
 
-.stepDesc {
+.stepTitleHi {
   font-size: 0.85rem;
   color: var(--text-secondary);
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.stepDesc {
+  font-size: 0.875rem;
+  color: var(--text-main);
   line-height: 1.5;
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+}
+
+.stepDescHi {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
   margin: 0;
   font-weight: 500;
 }
@@ -118,10 +181,33 @@
   .timelineLine {
     position: absolute;
     top: 52px; /* aligns to the vertical center of the icon circle wrappers */
-    left: 8%;
-    right: 8%;
+    left: 10%;
+    right: 10%;
     height: 2px;
     background-color: var(--border-color);
     z-index: 1;
   }
+}
+
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.ctaWrapper a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.5rem;
+  height: auto;
+  border-radius: 9999px;
+  gap: 0.15rem;
+}
+
+.btnSubtext {
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.85;
 }

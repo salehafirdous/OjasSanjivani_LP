@@ -2,62 +2,36 @@ import React, { useState } from 'react';
 import styles from './Reviews.module.css';
 import { Star, ChevronLeft, ChevronRight, ShieldCheck, HeartPulse } from 'lucide-react';
 
-const reviews = [
+const reviewsData = [
   {
     id: 1,
-    name: "R. Sharma",
-    location: "Delhi",
-    text: "I was suffering from ED for 2 years. I tried many allopathic medicines but they only gave temporary results with side effects. Ojas Sanjivani's 3-month course completely cured me naturally.",
+    authorEn: "R.S. — Delhi",
+    authorHi: "आर.एस. — दिल्ली",
+    textEn: "The online consultation was completely private. The doctor listened to my symptoms without any judgment and explained the Ayurvedic plan clearly.",
+    textHi: "ऑनलाइन परामर्श पूरी तरह से निजी था। डॉक्टर ने बिना किसी जजमेंट के मेरे लक्षणों को सुना और आयुर्वेदिक योजना को स्पष्ट रूप से समझाया।",
     rating: 5,
-    tag: "Ayurvedic Healing"
+    tagEn: "Privacy & Comfort",
+    tagHi: "गोपनीयता और आराम"
   },
   {
     id: 2,
-    name: "Vikram & Sneha V.",
-    location: "Mumbai",
-    text: "Performance anxiety was ruining our marriage. The consultation was very discreet, and the doctor was highly understanding. The natural drops worked wonders within just 3 weeks.",
+    authorEn: "A.K. — Mumbai",
+    authorHi: "ए.के. — मुंबई",
+    textEn: "Very structured approach. They looked at my overall routine, sleep, and stress levels, not just the physical symptoms. The guidance was practical.",
+    textHi: "बहुत ही व्यवस्थित तरीका। उन्होंने केवल शारीरिक लक्षणों को ही नहीं, बल्कि मेरी पूरी दिनचर्या, नींद और तनाव के स्तर को भी देखा। मार्गदर्शन व्यावहारिक था।",
     rating: 5,
-    tag: "Fast Relief"
+    tagEn: "Structured Guidance",
+    tagHi: "व्यवस्थित मार्गदर्शन"
   },
   {
     id: 3,
-    name: "Amit K.",
-    location: "Bangalore",
-    text: "Due to diabetes, I had lost my libido and suffered from ED. The personalized treatment plan not only improved my sexual health but also boosted my overall energy levels. Highly recommended.",
+    authorEn: "K.N. — Bangalore",
+    authorHi: "के.एन. — बैंगलोर",
+    textEn: "I felt respected throughout. Having a private video call from home made it easy to discuss personal concerns that I had avoided for years.",
+    textHi: "मुझे पूरे समय सम्मान महसूस हुआ। घर से निजी वीडियो कॉल करने से उन व्यक्तिगत चिंताओं पर चर्चा करना आसान हो गया जिन्हें मैंने सालों से टाला था।",
     rating: 5,
-    tag: "Holistic Care"
-  },
-  {
-    id: 4,
-    name: "Rajesh P.",
-    location: "Pune",
-    text: "I was almost on the verge of giving up after failing to get results elsewhere. Consulting the experts here was the best decision. I feel completely rejuvenated and confident.",
-    rating: 5,
-    tag: "Confidence Restored"
-  },
-  {
-    id: 5,
-    name: "Pooja M.",
-    location: "Hyderabad",
-    text: "I had severe irregular periods and PCOS for 4 years. The homeopathic and ayurvedic combination treatment from Ojas Sanjivani regulated my cycles and cleared my acne in just 4 months. So grateful!",
-    rating: 5,
-    tag: "PCOS Recovery"
-  },
-  {
-    id: 6,
-    name: "Suresh N.",
-    location: "Chennai",
-    text: "Chronic joint pain and arthritis made it hard for me to walk. After starting the herbal formulation and oil therapy recommended by the doctors here, the swelling has reduced by 80% and I can walk pain-free.",
-    rating: 5,
-    tag: "Joint Pain Relief"
-  },
-  {
-    id: 7,
-    name: "Karan S.",
-    location: "Gurgaon",
-    text: "I suffered from premature ejaculation and low vitality for a year, which affected my mental health. Ojas Sanjivani's root-cause treatment restored my stamina and confidence completely. Excellent, discreet care.",
-    rating: 5,
-    tag: "Stamina Boost"
+    tagEn: "Respectful Care",
+    tagHi: "सम्मानजनक देखभाल"
   }
 ];
 
@@ -65,22 +39,32 @@ const Reviews: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextReview = () => {
-    setCurrentIndex((prev) => (prev === reviews.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === reviewsData.length - 1 ? 0 : prev + 1));
   };
 
   const prevReview = () => {
-    setCurrentIndex((prev) => (prev === 0 ? reviews.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? reviewsData.length - 1 : prev - 1));
   };
 
-  const currentReview = reviews[currentIndex];
+  const currentReview = reviewsData[currentIndex];
 
   return (
     <section id="reviews" className={`section-padding ${styles.reviewsSection}`}>
       <div className="container">
-        <div className="text-center">
-          <h2 className="section-title">Loved & Trusted by <span className="highlight">3000+ Patients</span></h2>
-          <p className="section-subtitle">
-            Real stories of hope, perseverance, and joy from patients who reclaimed their health and confidence.
+        
+        {/* Section 12: Testimonials */}
+        <div className={styles.sectionHeader}>
+          <h2 className="section-title text-center">
+            Loved & Trusted by <span className="highlight">3000+ Patients</span>
+          </h2>
+          <p className={styles.hiSubtitle}>
+            रोगियों द्वारा पसंद और भरोसा किया गया
+          </p>
+          <p className="section-subtitle text-center">
+            Real experiences can help visitors understand the consultation journey. We use only authentic, consented testimonials that accurately reflect typical experience.
+            <span className={styles.hiBlockText}>
+              वास्तविक अनुभव लोगों को परामर्श की प्रक्रिया समझने में मदद कर सकते हैं। केवल वास्तविक, सहमति-प्राप्त प्रशंसापत्र उपयोग करें जो सामान्य अनुभव को सही ढंग से दर्शाते हों।
+            </span>
           </p>
         </div>
 
@@ -140,16 +124,22 @@ const Reviews: React.FC = () => {
                 ))}
               </div>
 
-              <p className={styles.reviewText}>"{currentReview.text}"</p>
+              <div className={styles.testimonialContent}>
+                <p className={styles.reviewText}>"{currentReview.textEn}"</p>
+                <p className={styles.reviewTextHi}>"{currentReview.textHi}"</p>
+              </div>
 
               <div className={styles.authorSection}>
                 <div className={styles.authorInfo}>
                   <h4 className={styles.authorName}>
-                    {currentReview.name}
+                    {currentReview.authorEn}
                   </h4>
-                  <span className={styles.authorAge}>{currentReview.location}</span>
+                  <span className={styles.authorNameHi}>{currentReview.authorHi}</span>
                 </div>
-                <div className={styles.tag}>{currentReview.tag}</div>
+                <div className={styles.tag}>
+                  <span>{currentReview.tagEn}</span>
+                  <span className={styles.tagSubtext}>{currentReview.tagHi}</span>
+                </div>
               </div>
             </div>
 
@@ -158,7 +148,7 @@ const Reviews: React.FC = () => {
                 <ChevronLeft size={20} />
               </button>
               <div className={styles.dots}>
-                {reviews.map((_, idx) => (
+                {reviewsData.map((_, idx) => (
                   <div
                     key={idx}
                     className={`${styles.dot} ${idx === currentIndex ? styles.dotActive : ''}`}

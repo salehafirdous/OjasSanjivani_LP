@@ -1,161 +1,274 @@
 .problemsSection {
   background-color: var(--bg-light);
-  position: relative;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .sectionBadge {
-  display: inline-block;
-  background-color: rgba(2, 129, 116, 0.1);
-  color: var(--primary);
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
-.grid {
+.badgeEn {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+}
+
+.badgeHi {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.hiSubtitle {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.hiBlockText {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-style: normal;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+}
+
+.topicHeader {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.topicHeader h3 {
+  font-size: 1.15rem;
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.problemsGrid {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1.5rem;
-  margin-top: 3rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 3rem;
 }
 
 @media (min-width: 768px) {
-  .grid {
+  .problemsGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(4, 1fr);
+  .problemsGrid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.card {
+.problemCard {
   background-color: white;
   border: 1px solid var(--border-color);
   border-radius: 1rem;
-  padding: 1.5rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  padding: 1.25rem 1.5rem;
   display: flex;
-  flex-direction: column;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  border-color: rgba(2, 129, 116, 0.3);
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background-color: var(--primary);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.card:hover::before {
-  transform: scaleX(1);
-}
-
-.cardHeader {
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 1rem;
-  margin-bottom: 1.5rem;
+  transition: all 0.3s;
+}
+
+.problemCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(2, 129, 116, 0.08);
+  border-color: rgba(2, 129, 116, 0.25);
 }
 
 .iconWrapper {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(2, 129, 116, 0.1);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--secondary-light);
   color: var(--primary);
-  border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
 }
 
-.card:hover .iconWrapper {
+.problemCard:hover .iconWrapper {
   background-color: var(--primary);
   color: white;
 }
 
-.cardTitle {
-  font-size: 1.125rem;
+.cardContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.enText {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.35;
+  margin-bottom: 0.15rem;
+}
+
+.hiText {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.framingCard {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.framingHeader {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.framingEn {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}
+
+.framingHi {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.delayGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .delayGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.delayCard {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  transition: all 0.3s;
+}
+
+.delayCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.05);
+  border-color: rgba(2, 129, 116, 0.2);
+}
+
+.delayCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.numberBadge {
+  width: 48px;
+  height: 48px;
+  background-color: var(--secondary-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.delayIcon {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.delayEnTitle {
+  font-size: 1.1rem;
   font-weight: 800;
   color: var(--text-dark);
   margin: 0;
   line-height: 1.2;
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  flex-grow: 1;
+.delayHiTitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin: 0.15rem 0 0 0;
 }
 
-.listItem {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  font-size: 0.85rem;
+.delayEnDesc {
+  font-size: 0.95rem;
   color: var(--text-main);
+  line-height: 1.5;
+  margin-bottom: 0.25rem;
+}
+
+.delayHiDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
   font-weight: 500;
 }
 
-.checkIcon {
-  color: var(--primary);
-  flex-shrink: 0;
-  margin-top: 0.125rem;
+.ctaWrapper {
+  display: flex;
+  justify-content: center;
 }
 
-.btn {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  font-weight: 700;
-  font-size: 0.875rem;
-  text-align: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: none;
+.ctaWrapper a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.5rem;
+  height: auto;
+  border-radius: 9999px;
+  gap: 0.15rem;
 }
 
-.btnLight {
-  background-color: #F0FDF9;
-  color: var(--primary);
-}
-
-.btnLight:hover {
-  background-color: #CCFBF1;
-}
-
-.btnGreen {
-  background-color: #10B981;
-  color: white;
-}
-
-.btnGreen:hover {
-  background-color: #059669;
+.btnSubtext {
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.85;
 }

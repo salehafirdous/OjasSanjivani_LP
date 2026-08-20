@@ -2,14 +2,16 @@ import { useEffect } from 'react';
 import './index.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Stats from './components/Stats';
-import Problems from './components/Problems'; // Now acts as Services
+import VSL from './components/VSL';
+import Problems from './components/Problems';
 import MensWellness from './components/MensWellness';
 import Solutions from './components/Solutions';
+import WhyOjas from './components/WhyOjas';
 import Specialists from './components/Specialists';
-import Process from './components/Process';
 import Reviews from './components/Reviews';
+import Process from './components/Process';
 import FAQs from './components/FAQs';
+import FinalCTAForm from './components/FinalCTAForm';
 import Footer from './components/Footer';
 
 function App() {
@@ -34,14 +36,16 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <Stats />
-        <Solutions />
+        <VSL />
         <Problems />
         <MensWellness />
+        <Solutions />
+        <WhyOjas />
         <Specialists />
-        <Process />
         <Reviews />
+        <Process />
         <FAQs />
+        <FinalCTAForm />
       </main>
       <Footer />
 

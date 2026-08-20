@@ -1,0 +1,242 @@
+.whyOjasSection {
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 4.5rem;
+  }
+}
+
+.sectionBadge {
+  display: inline-flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.badgeEn {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.1em;
+}
+
+.badgeHi {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.headline {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .headline {
+    font-size: 2.5rem;
+  }
+}
+
+.hiHeadline {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  line-height: 1.4;
+  border-left: 2px solid var(--primary);
+  padding-left: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.pointsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.pointCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.checkWrapper {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--secondary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.pointEnTitle {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin-bottom: 0.15rem;
+}
+
+.pointHiTitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.pointEnDesc {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.5;
+  margin-bottom: 0.15rem;
+}
+
+.pointHiDesc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.promiseCol {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.brandPromiseCard {
+  background-color: var(--bg-mint);
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.brandPromiseCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary);
+}
+
+.promiseBadge {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--primary);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.promiseEn {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.promiseHi {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.assuranceCard {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 2rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+}
+
+.assuranceEnHeadline {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-dark);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.assuranceHiHeadline {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  border-left: 2px solid var(--primary);
+  padding-left: 0.75rem;
+}
+
+.policyNotice {
+  background-color: var(--bg-light);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+.policyEn {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.policyHi {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.ctaWrapper {
+  display: flex;
+}
+
+.ctaWrapper a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.2rem;
+  height: auto;
+  border-radius: 1rem;
+  gap: 0.15rem;
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .ctaWrapper a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 9999px;
+  }
+}
+
+.btnSubtext {
+  font-size: 0.72rem;
+  font-weight: 500;
+  opacity: 0.85;
+}

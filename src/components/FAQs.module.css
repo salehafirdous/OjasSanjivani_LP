@@ -92,6 +92,13 @@
   font-weight: 500;
 }
 
+.hiAnswer {
+  border-top: 1px dashed var(--border-color);
+  padding-top: 1rem;
+  font-size: 0.875rem !important;
+  color: var(--text-secondary) !important;
+}
+
 .faqSubtitle {
   max-width: none !important;
 }
