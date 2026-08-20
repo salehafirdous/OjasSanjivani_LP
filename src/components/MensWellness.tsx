@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './MensWellness.module.css';
-import { ShieldCheck, Heart, User, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const consultationBenefits = [
   {

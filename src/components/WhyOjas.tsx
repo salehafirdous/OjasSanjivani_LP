@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './WhyOjas.module.css';
-import { ShieldCheck, HeartPulse, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 const whyOjasPoints = [
   {
@@ -33,7 +33,7 @@ const WhyOjas: React.FC = () => {
   return (
     <section id="why-ojas" className={`section-padding ${styles.whyOjasSection}`}>
       <div className="wide-container">
-        
+
         {/* Section 9: Why Ojas Sanjivani */}
         <div className={styles.grid}>
           {/* Left Column: Points list */}
@@ -42,7 +42,7 @@ const WhyOjas: React.FC = () => {
               <span className={styles.badgeEn}>WHY OJAS SANJIVANI</span>
               <span className={styles.badgeHi}>ओजस संजीवनी क्यों</span>
             </div>
-            
+
             <h2 className={styles.headline}>
               A Safe Space for Your <span className="highlight">Intimate Health Journey</span>
             </h2>
@@ -69,7 +69,7 @@ const WhyOjas: React.FC = () => {
 
           {/* Right Column: Brand Promise & 15-day assurance */}
           <div className={styles.promiseCol}>
-            
+
             {/* Brand Promise Badge */}
             <div className={styles.brandPromiseCard}>
               <span className={styles.promiseBadge}>BRAND PROMISE</span>
@@ -87,7 +87,7 @@ const WhyOjas: React.FC = () => {
                 <span className={styles.badgeEn}>15-DAY SUPPORT ASSURANCE</span>
                 <span className={styles.badgeHi}>15-दिन का सहयोग आश्वासन</span>
               </div>
-              
+
               <h4 className={styles.assuranceEnHeadline}>
                 Begin with clarity: if, within 15 days of starting the recommended plan, you feel the guidance has not been useful for your situation, contact the Ojas support team for a review of your next steps under the published policy.
               </h4>

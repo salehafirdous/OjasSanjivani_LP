@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Problems.module.css';
-import { ShieldAlert, AlertCircle, EyeOff, UserX, HelpCircle, FileQuestion } from 'lucide-react';
+import { ShieldAlert, AlertCircle, UserX, HelpCircle } from 'lucide-react';
 
 const problemsList = [
   {
