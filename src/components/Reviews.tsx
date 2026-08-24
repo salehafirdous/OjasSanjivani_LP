@@ -51,7 +51,7 @@ const Reviews: React.FC = () => {
   return (
     <section id="reviews" className={`section-padding ${styles.reviewsSection}`}>
       <div className="container">
-        
+
         {/* Section 12: Testimonials */}
         <div className={styles.sectionHeader}>
           <h2 className="section-title text-center">
@@ -163,6 +163,55 @@ const Reviews: React.FC = () => {
           </div>
 
         </div>
+
+        {/* Video Testimonials Sub-section */}
+        <div className={styles.videoTestimonialsSection}>
+          <div className={styles.videoSectionHeader}>
+            <h3 className={styles.videoEnHeading}>Video Patient Stories</h3>
+            <p className={styles.videoHiSubtitle}>वीडियो रोगी प्रशंसापत्र और अनुभव</p>
+          </div>
+          
+          <div className={styles.videoGrid}>
+            {/* Video Card 1 */}
+            <div className={styles.videoCard}>
+              <div className={styles.iframeWrapper}>
+                {/* Note for developers: Swap the video ID after 'embed/' with your own YouTube video ID */}
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/xJ0bLnJ1yUE"
+                  title="Ayurveda Patient Review 1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className={styles.videoCardContent}>
+                <h4 className={styles.videoCardTitleEn}>Chronic Condition Recovery & Treatment Success Story</h4>
+                <p className={styles.videoCardTitleHi}>क्रोनिक बीमारी से राहत और उपचार की सफलता की कहानी</p>
+              </div>
+            </div>
+
+            {/* Video Card 2 */}
+            <div className={styles.videoCard}>
+              <div className={styles.iframeWrapper}>
+                {/* Note for developers: Swap the video ID after 'embed/' with your own YouTube video ID */}
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/1ENmeIwBY-U"
+                  title="Ayurveda Patient Review 2"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                ></iframe>
+              </div>
+              <div className={styles.videoCardContent}>
+                <h4 className={styles.videoCardTitleEn}>Hormonal & Lifestyle Treatment Patient Success Story</h4>
+                <p className={styles.videoCardTitleHi}>हार्मोनल और जीवनशैली उपचार की सफलता की कहानी</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
