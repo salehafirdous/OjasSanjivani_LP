@@ -159,7 +159,7 @@ const Hero: React.FC = () => {
                     {/* Name Input */}
                     <div className={styles.inputGroup}>
                       <label className={styles.label}>
-                        <span>Name / नाम</span> <span className={styles.required}>*</span>
+                        <span>Name</span> <span className={styles.required}>*</span>
                       </label>
                       <input
                         type="text"
@@ -174,7 +174,7 @@ const Hero: React.FC = () => {
                     {/* Mobile Input */}
                     <div className={styles.inputGroup}>
                       <label className={styles.label}>
-                        <span>Mobile number / मोबाइल नंबर</span> <span className={styles.required}>*</span>
+                        <span>Mobile number</span> <span className={styles.required}>*</span>
                       </label>
                       <input
                         type="tel"
@@ -189,27 +189,13 @@ const Hero: React.FC = () => {
                     {/* Email Input */}
                     <div className={styles.inputGroup}>
                       <label className={styles.label}>
-                        <span>Email / ईमेल</span>
+                        <span>Email</span>
                       </label>
                       <input
                         type="email"
                         placeholder="Enter Email Address"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        disabled={isSubmitting}
-                      />
-                    </div>
-
-                    {/* Optional Guidance Note */}
-                    <div className={styles.inputGroup}>
-                      <label className={styles.label}>
-                        <span>What would you like guidance on? (Optional) / आप किस बारे में मार्गदर्शन चाहते हैं?</span>
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="Briefly state your concern"
-                        value={formData.guidance}
-                        onChange={(e) => setFormData({ ...formData, guidance: e.target.value })}
                         disabled={isSubmitting}
                       />
                     </div>
