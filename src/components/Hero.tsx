@@ -7,6 +7,7 @@ const Hero: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     mobile: '',
+    email: '',
     language: 'english',
     contactTime: 'anytime',
     guidance: ''
@@ -35,7 +36,7 @@ const Hero: React.FC = () => {
       await submitLead({
         name: formData.name,
         mobile: formData.mobile,
-        email: undefined,
+        email: formData.email || undefined,
         preferred_date: undefined,
         consultation_mode: undefined,
         medical_system: guidanceNote,
@@ -76,9 +77,6 @@ const Hero: React.FC = () => {
             <h1 className={styles.title}>
               A private, practitioner guided approach to <span className={styles.highlight}>intimate wellbeing</span> through Ayurveda and Homeopathy
             </h1>
-            <p className={styles.hiTitle}>
-              आयुर्वेद और होम्योपैथी के माध्यम से <span className={styles.highlight}>अंतरंग स्वास्थ्य</span> को समझने और सँभालने का निजी, चिकित्सक-निर्देशित दृष्टिकोण
-            </p>
 
             <p className={styles.subtitle}>
               Discuss your concerns respectfully with a qualified practitioner from the comfort of home. No awkward waiting rooms. No public discussion.
@@ -124,7 +122,7 @@ const Hero: React.FC = () => {
                     Thank you, <strong>{formData.name}</strong>. We have received your request.
                   </p>
                   <p className={styles.successSubtext}>
-                    An expert from the Ojas team will call you back on <strong>{formData.mobile}</strong> during your preferred slot: <strong>{formData.contactTime}</strong>.
+                    An expert from the Ojas team will call you back on <strong>{formData.mobile}</strong> shortly.
                   </p>
                   <button
                     onClick={() => {
@@ -132,6 +130,7 @@ const Hero: React.FC = () => {
                       setFormData({
                         name: '',
                         mobile: '',
+                        email: '',
                         language: 'english',
                         contactTime: 'anytime',
                         guidance: ''
@@ -187,53 +186,18 @@ const Hero: React.FC = () => {
                       />
                     </div>
 
-                    {/* Language Preference */}
+                    {/* Email Input */}
                     <div className={styles.inputGroup}>
                       <label className={styles.label}>
-                        <span>Preferred language / पसंदीदा भाषा</span> <span className={styles.required}>*</span>
+                        <span>Email / ईमेल</span>
                       </label>
-                      <div className={styles.radioGroup}>
-                        <label className={styles.radioLabel}>
-                          <input
-                            type="radio"
-                            name="preferred_language_hero"
-                            value="english"
-                            checked={formData.language === 'english'}
-                            onChange={() => setFormData({ ...formData, language: 'english' })}
-                            disabled={isSubmitting}
-                          />
-                          <span>English / अंग्रेज़ी</span>
-                        </label>
-                        <label className={styles.radioLabel}>
-                          <input
-                            type="radio"
-                            name="preferred_language_hero"
-                            value="hindi"
-                            checked={formData.language === 'hindi'}
-                            onChange={() => setFormData({ ...formData, language: 'hindi' })}
-                            disabled={isSubmitting}
-                          />
-                          <span>Hindi / हिंदी</span>
-                        </label>
-                      </div>
-                    </div>
-
-                    {/* Preferred Time */}
-                    <div className={styles.inputGroup}>
-                      <label className={styles.label}>
-                        <span>Preferred contact time / संपर्क का समय</span>
-                      </label>
-                      <select
-                        className={styles.selectInput}
-                        value={formData.contactTime}
-                        onChange={(e) => setFormData({ ...formData, contactTime: e.target.value })}
+                      <input
+                        type="email"
+                        placeholder="Enter Email Address"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         disabled={isSubmitting}
-                      >
-                        <option value="anytime">Anytime / किसी भी समय</option>
-                        <option value="morning">Morning (9 AM - 12 PM) / सुबह</option>
-                        <option value="afternoon">Afternoon (12 PM - 4 PM) / दोपहर</option>
-                        <option value="evening">Evening (4 PM - 8 PM) / शाम</option>
-                      </select>
+                      />
                     </div>
 
                     {/* Optional Guidance Note */}

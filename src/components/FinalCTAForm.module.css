@@ -172,6 +172,7 @@
 
 .inputGroup input[type="text"],
 .inputGroup input[type="tel"],
+.inputGroup input[type="email"],
 .selectInput {
   width: 100%;
   height: 48px;
