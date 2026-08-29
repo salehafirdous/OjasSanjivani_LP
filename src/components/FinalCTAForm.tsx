@@ -202,19 +202,6 @@ const FinalCTAForm: React.FC = () => {
                   </div>
 
 
-                  {/* Optional Guidance Note */}
-                  <div className={styles.inputGroup}>
-                    <label className={styles.label}>
-                      <span>What would you like guidance on? (Optional) / आप किस बारे में मार्गदर्शन चाहते हैं?</span>
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Briefly state your concern"
-                      value={formData.guidance}
-                      onChange={(e) => setFormData({ ...formData, guidance: e.target.value })}
-                      disabled={isSubmitting}
-                    />
-                  </div>
 
                   {/* Consent checkbox */}
 
