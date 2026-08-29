@@ -3,8 +3,8 @@ import styles from './Specialists.module.css';
 
 const specialistsList = [
   {
-    name: "Dr. Rajeev Sharma",
-    qualifications: "BAMS, MD (Ayurveda)",
+    name: "Dr. Rahil Shaikh",
+    qualifications: "BHMS, MBA (HCA)",
     registration: "Reg. No: AY-2049/A",
     experience: "25+ Years Experience",
     image: "/images/doctor-rajeev.png",
@@ -12,8 +12,8 @@ const specialistsList = [
     philosophyHi: "मेरा तरीका है बिना जजमेंट के सुनना, पूरी परिस्थिति समझना और जिम्मेदार अगले कदम सुझाना।"
   },
   {
-    name: "Dr. Neha Patel",
-    qualifications: "BHMS (Homeopathy)",
+    name: "Dr. Nasarin Shaikh",
+    qualifications: "BHMS",
     registration: "Reg. No: HOM-9214/B",
     experience: "15+ Years Experience",
     image: "/images/doctor-neha.png",
@@ -21,8 +21,8 @@ const specialistsList = [
     philosophyHi: "मैं शुद्ध और सुरक्षित उपचार सुझाने के लिए आपकी दिनचर्या और तनाव के कारकों की पूरी समय-सीमा का आकलन करने पर ध्यान केंद्रित करती हूँ।"
   },
   {
-    name: "Dr. Vikram Singh",
-    qualifications: "MBBS, MD (General Medicine)",
+    name: "Dr. Sarfarj Raje",
+    qualifications: "BHMS",
     registration: "Reg. No: MCI-84451/C",
     experience: "18+ Years Experience",
     image: "/images/doctor-siddharth.png",
@@ -35,7 +35,7 @@ const Specialists: React.FC = () => {
   return (
     <section id="practitioners" className={`section-padding ${styles.specialistsSection}`}>
       <div className="wide-container">
-        
+
         {/* Section 11: Practitioner credibility */}
         <div className={styles.sectionHeader}>
           <h2 className="section-title text-center">
@@ -51,7 +51,7 @@ const Specialists: React.FC = () => {
             </span>
           </p>
         </div>
-        
+
         <div className={styles.grid}>
           {specialistsList.map((spec, idx) => (
             <div key={idx} className={styles.card}>
