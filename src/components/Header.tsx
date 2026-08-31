@@ -15,20 +15,20 @@ const Header: React.FC = () => {
             </span>
           </div>
           <div className={styles.topbarActions}>
-            <a href="tel:+919766548692" className={styles.phoneLink}>
+            <a href="tel:+9999999999" className={styles.phoneLink}>
               <Phone size={14} />
-              <span>+91 97665 48692</span>
+              <span>+91 9999999999</span>
             </a>
           </div>
         </div>
       </div>
-      
+
       <header className={styles.header}>
         <div className={styles.headerContainer}>
           <a href="/" className={styles.logo}>
             <img src="/images/logo.png" alt="Ojas Sanjivani Logo" className={styles.logoImage} />
           </a>
-          
+
           <nav className={styles.desktopNav}>
             <a href="#why-ojas" className={styles.navLink}>Why OjasSanjivani</a>
             <a href="#concerns-ayurveda" className={styles.navLink}>Services</a>
@@ -36,19 +36,19 @@ const Header: React.FC = () => {
             <a href="#reviews" className={styles.navLink}>Testimonials</a>
             <a href="#faqs" className={styles.navLink}>FAQs</a>
           </nav>
-          
+
           <div className={styles.headerRight}>
-             <a href="tel:+919766548692" className={styles.contactPill}>
-               <Phone size={16} className={styles.phoneIcon} />
-               <span>+919766548692</span>
-             </a>
-             <a href="#lead-form-section" className="btn-primary">
-                <span className={styles.desktopBtnText}>Book Free Consultation</span>
-                <span className={styles.mobileBtnText}>Book Free</span>
-             </a>
-             <button className={styles.menuToggle} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
-               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-             </button>
+            <a href="tel:+9999999999" className={styles.contactPill}>
+              <Phone size={16} className={styles.phoneIcon} />
+              <span>+9999999999</span>
+            </a>
+            <a href="#lead-form-section" className="btn-primary">
+              <span className={styles.desktopBtnText}>Book Free Consultation</span>
+              <span className={styles.mobileBtnText}>Book Free</span>
+            </a>
+            <button className={styles.menuToggle} onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
 

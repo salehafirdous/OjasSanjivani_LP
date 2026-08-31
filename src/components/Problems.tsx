@@ -6,32 +6,38 @@ const problemsList = [
   {
     enTitle: "Changes in desire, confidence, or comfort",
     hiTitle: "इच्छा, आत्मविश्वास या सहजता में बदलाव",
-    icon: <UserX size={20} />
+    icon: <UserX size={20} />,
+    image: "/images/problem-desire.png"
   },
   {
     enTitle: "Performance-related worry or stress",
     hiTitle: "प्रदर्शन को लेकर चिंता या तनाव",
-    icon: <AlertCircle size={20} />
+    icon: <AlertCircle size={20} />,
+    image: "/images/problem-stress.png"
   },
   {
     enTitle: "Early discharge concerns",
     hiTitle: "जल्दी स्खलन से जुड़ी चिंता",
-    icon: <ShieldAlert size={20} />
+    icon: <ShieldAlert size={20} />,
+    image: "/images/problem-discharge.png"
   },
   {
     enTitle: "Erection-related concerns",
     hiTitle: "इरेक्शन से संबंधित चिंता",
-    icon: <ShieldAlert size={20} />
+    icon: <ShieldAlert size={20} />,
+    image: "/images/problem-erection.png"
   },
   {
     enTitle: "Low energy, tiredness, or reduced vitality",
     hiTitle: "कम ऊर्जा, थकान या कमज़ोर महसूस होना",
-    icon: <AlertCircle size={20} />
+    icon: <AlertCircle size={20} />,
+    image: "/images/problem-energy.png"
   },
   {
     enTitle: "Questions about Ayurveda or Homeopathy treatment support",
     hiTitle: "आयुर्वेद या होम्योपैथी उपचार सहयोग से जुड़े प्रश्न",
-    icon: <HelpCircle size={20} />
+    icon: <HelpCircle size={20} />,
+    image: "/images/problem-ayurveda.png"
   }
 ];
 
@@ -41,28 +47,28 @@ const delayReasons = [
     hiTitle: "गोपनीयता की चिंता",
     enDesc: "Worry about sharing personal details or records.",
     hiDesc: "व्यक्तिगत विवरण या रिकॉर्ड साझा करने की चिंता।",
-    image: "/images/delay-privacy.png"
+    image: "/images/delay-privacy-real.jpg"
   },
   {
     enTitle: "Fear of judgement",
     hiTitle: "जज किए जाने का डर",
     enDesc: "Anxiety about talking to standard clinics without privacy.",
     hiDesc: "बिना गोपनीयता के सामान्य क्लीनिकों में बात करने की चिंता।",
-    image: "/images/delay-judgment.png"
+    image: "/images/delay-judgment-real.jpg"
   },
   {
     enTitle: "Confusing advice online",
     hiTitle: "ऑनलाइन विरोधाभासी सलाह",
     enDesc: "Confusing or contradictory tips found on internet search results.",
     hiDesc: "इंटरनेट खोज परिणामों पर पाई जाने वाली भ्रामक या विरोधाभासी युक्तियाँ।",
-    image: "/images/delay-confusing.png"
+    image: "/images/delay-confusing-real.jpg"
   },
   {
     enTitle: "Not knowing the process",
     hiTitle: "परामर्श कैसा होगा, यह न जानना",
     enDesc: "Uncertainty of what a digital private consultation will be like.",
     hiDesc: "डिजिटल निजी परामर्श कैसा होगा इसकी अनिश्चितता।",
-    image: "/images/delay-process.png"
+    image: "/images/delay-process-real.jpg"
   }
 ];
 
@@ -94,9 +100,14 @@ const Problems: React.FC = () => {
         <div className={styles.problemsGrid}>
           {problemsList.map((prob, idx) => (
             <div key={idx} className={styles.problemCard}>
-              <div className={styles.iconWrapper}>{prob.icon}</div>
+              <div className={styles.cardImageWrapper}>
+                <img src={prob.image} alt={prob.enTitle} className={styles.cardImage} />
+              </div>
               <div className={styles.cardContent}>
-                <p className={styles.enText}>{prob.enTitle}</p>
+                <div className={styles.titleRow}>
+                  <div className={styles.iconWrapper}>{prob.icon}</div>
+                  <p className={styles.enText}>{prob.enTitle}</p>
+                </div>
                 <p className={styles.hiText}>{prob.hiTitle}</p>
               </div>
             </div>
@@ -137,21 +148,19 @@ const Problems: React.FC = () => {
         <div className={styles.delayGrid}>
           {delayReasons.map((reason, idx) => (
             <div key={idx} className={styles.delayCard}>
-              <div className={styles.delayCardHeader}>
-                <div className={styles.numberBadge}>
-                  <img
-                    src={reason.image}
-                    alt={reason.enTitle}
-                    className={styles.delayIcon}
-                  />
-                </div>
-                <div>
-                  <h4 className={styles.delayEnTitle}>{reason.enTitle}</h4>
-                  <h4 className={styles.delayHiTitle}>{reason.hiTitle}</h4>
-                </div>
+              <div className={styles.delayCardImageWrapper}>
+                <img
+                  src={reason.image}
+                  alt={reason.enTitle}
+                  className={styles.delayCardImage}
+                />
               </div>
-              <p className={styles.delayEnDesc}>{reason.enDesc}</p>
-              <p className={styles.delayHiDesc}>{reason.hiDesc}</p>
+              <div className={styles.delayCardContent}>
+                <h4 className={styles.delayEnTitle}>{reason.enTitle}</h4>
+                <h4 className={styles.delayHiTitle}>{reason.hiTitle}</h4>
+                <p className={styles.delayEnDesc}>{reason.enDesc}</p>
+                <p className={styles.delayHiDesc}>{reason.hiDesc}</p>
+              </div>
             </div>
           ))}
         </div>

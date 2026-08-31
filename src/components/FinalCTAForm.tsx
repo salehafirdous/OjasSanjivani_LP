@@ -56,7 +56,7 @@ const FinalCTAForm: React.FC = () => {
   };
 
   return (
-    <section id="bottom-cta-form" className={`section-padding ${styles.section}`}>
+    <section id="lead-form-section" className={`section-padding ${styles.section}`}>
       <div className="wide-container">
 
         {/* Section 15: Lead form and final CTA */}
@@ -104,13 +104,6 @@ const FinalCTAForm: React.FC = () => {
               </div>
             </div>
 
-            <div className={styles.securityTrustCard}>
-              <ShieldCheck className={styles.trustIcon} size={28} />
-              <div>
-                <h4 className={styles.trustEn}>100% HIPAA-Compliant Privacy</h4>
-                <p className={styles.trustHi}>100% गोपनीयता की गारंटी - आपकी संवेदनशील जानकारी पूरी तरह सुरक्षित है।</p>
-              </div>
-            </div>
           </div>
 
           {/* Right Column: Lead Form Card */}

@@ -5,8 +5,6 @@ const specialistsList = [
   {
     name: "Dr. Rahil Shaikh",
     qualifications: "BHMS, MBA (HCA)",
-    registration: "Reg. No: AY-2049/A",
-    experience: "25+ Years Experience",
     image: "/images/doctor-rajeev.png",
     philosophyEn: "My approach is to listen without judgement, understand the wider context, and recommend responsible next steps.",
     philosophyHi: "मेरा तरीका है बिना जजमेंट के सुनना, पूरी परिस्थिति समझना और जिम्मेदार अगले कदम सुझाना।"
@@ -14,8 +12,6 @@ const specialistsList = [
   {
     name: "Dr. Nasarin Shaikh",
     qualifications: "BHMS",
-    registration: "Reg. No: HOM-9214/B",
-    experience: "15+ Years Experience",
     image: "/images/doctor-neha.png",
     philosophyEn: "I focus on mapping the complete timeline of your routine and stress factors to recommend pure, safe formulations.",
     philosophyHi: "मैं शुद्ध और सुरक्षित उपचार सुझाने के लिए आपकी दिनचर्या और तनाव के कारकों की पूरी समय-सीमा का आकलन करने पर ध्यान केंद्रित करती हूँ।"
@@ -23,11 +19,16 @@ const specialistsList = [
   {
     name: "Dr. Sarfarj Raje",
     qualifications: "BHMS",
-    registration: "Reg. No: MCI-84451/C",
-    experience: "18+ Years Experience",
     image: "/images/doctor-siddharth.png",
     philosophyEn: "Integrating general clinical medicine with natural wellness allows us to offer safe, comprehensive health recovery.",
     philosophyHi: "प्राकृतिक वेलनेस के साथ सामान्य नैदानिक चिकित्सा को एकीकृत करने से हमें सुरक्षित, व्यापक स्वास्थ्य सुधार की पेशकश करने में मदद मिलती है।"
+  },
+  {
+    name: "Dr. Saima Chogale",
+    qualifications: "BHMS, MBA (HCA)",
+    image: "/images/doctor-neha.png",
+    philosophyEn: "Committed to delivering compassionate and holistic care tailored to your unique healthcare needs.",
+    philosophyHi: "आपकी विशिष्ट स्वास्थ्य आवश्यकताओं के अनुरूप दयालु और समग्र देखभाल प्रदान करने के लिए प्रतिबद्ध।"
   }
 ];
 
@@ -61,10 +62,6 @@ const Specialists: React.FC = () => {
               <div className={styles.content}>
                 <h3 className={styles.name}>{spec.name}</h3>
                 <p className={styles.qualifications}>{spec.qualifications}</p>
-                <div className={styles.metaRow}>
-                  <span className={styles.regNo}>{spec.registration}</span>
-                  <span className={styles.exp}>{spec.experience}</span>
-                </div>
                 <div className={styles.philosophyBox}>
                   <p className={styles.philEn}>"{spec.philosophyEn}"</p>
                   <p className={styles.philHi}>"{spec.philosophyHi}"</p>

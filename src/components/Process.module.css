@@ -179,13 +179,19 @@
 /* Horizontal timeline connector */
 @media (min-width: 1024px) {
   .timelineLine {
+    display: none;
+  }
+  
+  .stepCard:not(:last-child)::after {
+    content: "→";
     position: absolute;
-    top: 52px; /* aligns to the vertical center of the icon circle wrappers */
-    left: 10%;
-    right: 10%;
-    height: 2px;
-    background-color: var(--border-color);
-    z-index: 1;
+    top: 50%;
+    right: -12px;
+    transform: translate(50%, -50%);
+    font-size: 2rem;
+    color: var(--primary);
+    z-index: 10;
+    pointer-events: none;
   }
 }
 

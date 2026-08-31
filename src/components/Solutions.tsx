@@ -5,23 +5,28 @@ import { AlertTriangle, CheckCircle } from 'lucide-react';
 const concernsList = [
   {
     enTitle: "Confidence and performance-related concerns",
-    hiTitle: "आत्मविश्वास और प्रदर्शन से जुड़ी चिंताएँ"
+    hiTitle: "आत्मविश्वास और प्रदर्शन से जुड़ी चिंताएँ",
+    image: "/images/concern-confidence.jpg"
   },
   {
     enTitle: "Early discharge concerns",
-    hiTitle: "जल्दी स्खलन से जुड़ी चिंता"
+    hiTitle: "जल्दी स्खलन से जुड़ी चिंता",
+    image: "/images/concern-discharge.jpg"
   },
   {
     enTitle: "Erection-related concerns",
-    hiTitle: "इरेक्शन से संबंधित चिंता"
+    hiTitle: "इरेक्शन से संबंधित चिंता",
+    image: "/images/concern-erection.jpg"
   },
   {
     enTitle: "Desire, energy, and vitality concerns",
-    hiTitle: "इच्छा, ऊर्जा और जीवंतता से जुड़ी चिंताएँ"
+    hiTitle: "इच्छा, ऊर्जा और जीवंतता से जुड़ी चिंताएँ",
+    image: "/images/concern-desire.jpg"
   },
   {
     enTitle: "Stress, sleep and lifestyle factors affecting wellbeing",
-    hiTitle: "तनाव, नींद और जीवनशैली के प्रभाव"
+    hiTitle: "तनाव, नींद और जीवनशैली के प्रभाव",
+    image: "/images/concern-lifestyle.jpg"
   }
 ];
 
@@ -52,7 +57,7 @@ const Solutions: React.FC = () => {
   return (
     <section id="concerns-ayurveda" className={`section-padding ${styles.solutionsSection}`}>
       <div className="wide-container">
-        
+
         {/* Section 7: Concerns covered */}
         <div className={styles.sectionHeader}>
           <h2 className="section-title text-center">
@@ -74,31 +79,24 @@ const Solutions: React.FC = () => {
           <div className={styles.concernsGrid}>
             {concernsList.map((concern, idx) => (
               <div key={idx} className={styles.concernCard}>
-                <div className={styles.bulletCheck}>
-                  <CheckCircle size={18} />
+                <div className={styles.concernCardImageWrapper}>
+                  <img
+                    src={concern.image}
+                    alt={concern.enTitle}
+                    className={styles.concernCardImage}
+                  />
                 </div>
-                <div>
-                  <h4 className={styles.concernEn}>{concern.enTitle}</h4>
+                <div className={styles.concernCardContent}>
+                  <div className={styles.titleRow}>
+                    <div className={styles.bulletCheck}>
+                      <CheckCircle size={18} />
+                    </div>
+                    <h4 className={styles.concernEn}>{concern.enTitle}</h4>
+                  </div>
                   <p className={styles.concernHi}>{concern.hiTitle}</p>
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Important warning banner */}
-          <div className={styles.warningBanner}>
-            <div className={styles.warningIconWrapper}>
-              <AlertTriangle size={24} />
-            </div>
-            <div className={styles.warningContent}>
-              <h4 className={styles.warningEn}>IMPORTANT ADVISORY</h4>
-              <p className={styles.warningEnText}>
-                This service does not replace urgent medical care. Seek prompt medical advice for chest pain, severe symptoms, sudden changes, or any emergency.
-              </p>
-              <p className={styles.warningHiText}>
-                <strong>महत्वपूर्ण:</strong> यह सेवा आपातकालीन चिकित्सा देखभाल का विकल्प नहीं है। सीने में दर्द, गंभीर लक्षण, अचानक बदलाव या किसी आपात स्थिति में तुरंत चिकित्सकीय सहायता लें।
-              </p>
-            </div>
           </div>
         </div>
 

@@ -86,22 +86,64 @@
   background-color: white;
   border: 1px solid var(--border-color);
   border-radius: 1rem;
-  padding: 1.25rem 1.5rem;
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  flex-direction: column;
+  overflow: hidden;
   transition: all 0.3s;
 }
 
 .problemCard:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 15px -3px rgba(2, 129, 116, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(2, 129, 116, 0.1);
   border-color: rgba(2, 129, 116, 0.25);
 }
 
+.cardImageWrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  background-color: var(--bg-light);
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  transition: transform 0.5s ease;
+}
+
+.problemCard:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.problemsGrid > div:nth-child(6) .cardImage {
+  object-position: center 45%;
+}
+
+.problemsGrid > div:nth-child(5) .cardImage {
+  object-position: center 50%;
+}
+
+.cardContent {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
 .iconWrapper {
-  width: 42px;
-  height: 42px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background-color: var(--secondary-light);
   color: var(--primary);
@@ -117,23 +159,21 @@
   color: white;
 }
 
-.cardContent {
-  display: flex;
-  flex-direction: column;
-}
-
 .enText {
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-dark);
   line-height: 1.35;
-  margin-bottom: 0.15rem;
+  margin: 0;
 }
 
 .hiText {
   font-size: 0.85rem;
   color: var(--text-secondary);
   font-weight: 500;
+  margin: 0;
+  padding-left: 2.75rem;
+  /* Aligns visually with the English text next to the icon */
 }
 
 .framingCard {
@@ -176,65 +216,81 @@
   margin-bottom: 3.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .delayGrid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .delayGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
   }
 }
 
 .delayCard {
   background-color: white;
   border: 1px solid var(--border-color);
-  border-radius: 1.5rem;
-  padding: 2rem;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   transition: all 0.3s;
 }
 
 .delayCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.05);
-  border-color: rgba(2, 129, 116, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px -5px rgba(2, 129, 116, 0.1);
+  border-color: rgba(2, 129, 116, 0.25);
 }
 
-.delayCardHeader {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-.numberBadge {
-  width: 48px;
-  height: 48px;
-  background-color: var(--secondary-light);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+.delayCardImageWrapper {
+  width: 100%;
+  height: 160px;
   overflow: hidden;
-  border: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  background-color: var(--bg-light);
 }
 
-.delayIcon {
+.delayCardImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  transition: transform 0.5s ease;
+}
+
+.delayCard:hover .delayCardImage {
+  transform: scale(1.05);
+}
+
+.delayGrid > div:nth-child(4) .delayCardImage {
+  object-position: center 15%;
+}
+
+.delayCardContent {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-grow: 1;
 }
 
 .delayEnTitle {
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 800;
   color: var(--text-dark);
   margin: 0;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .delayHiTitle {
   font-size: 0.85rem;
   color: var(--text-secondary);
   font-weight: 600;
-  margin: 0.15rem 0 0 0;
+  margin: 0;
 }
 
 .delayEnDesc {
