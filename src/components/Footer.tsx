@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.css';
-import { Phone, MapPin, Mail, Clock, ArrowUp } from 'lucide-react';
+import { Phone, Mail, ArrowUp } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const scrollToTop = (e: React.MouseEvent) => {

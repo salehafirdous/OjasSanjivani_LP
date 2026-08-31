@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './FinalCTAForm.module.css';
-import { CheckCircle2, Loader2, AlertCircle, ShieldCheck } from 'lucide-react';
+import { CheckCircle2, Loader2, AlertCircle } from 'lucide-react';
 import { submitLead } from '../utils/api';
 
 const FinalCTAForm: React.FC = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Solutions.module.css';
-import { AlertTriangle, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const concernsList = [
   {
