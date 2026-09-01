@@ -119,12 +119,16 @@
   transform: scale(1.05);
 }
 
-.problemsGrid > div:nth-child(6) .cardImage {
-  object-position: center 45%;
+.problemsGrid>div:nth-child(3) .cardImage {
+  object-position: center 40%;
 }
 
-.problemsGrid > div:nth-child(5) .cardImage {
+.problemsGrid>div:nth-child(5) .cardImage {
   object-position: center 50%;
+}
+
+.problemsGrid>div:nth-child(6) .cardImage {
+  object-position: center 45%;
 }
 
 .cardContent {
@@ -266,7 +270,7 @@
   transform: scale(1.05);
 }
 
-.delayGrid > div:nth-child(4) .delayCardImage {
+.delayGrid>div:nth-child(4) .delayCardImage {
   object-position: center 15%;
 }
 

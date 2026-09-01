@@ -19,7 +19,7 @@ const problemsList = [
     enTitle: "Early discharge concerns",
     hiTitle: "जल्दी स्खलन से जुड़ी चिंता",
     icon: <ShieldAlert size={20} />,
-    image: "/images/problem-discharge.png"
+    image: "/images/concern-discharge.png",
   },
   {
     enTitle: "Erection-related concerns",

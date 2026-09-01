@@ -6,27 +6,29 @@ const concernsList = [
   {
     enTitle: "Confidence and performance-related concerns",
     hiTitle: "आत्मविश्वास और प्रदर्शन से जुड़ी चिंताएँ",
-    image: "/images/concern-confidence.jpg"
+    image: "/images/concern-confidence.png",
+    objectPosition: "center 20%"
   },
   {
     enTitle: "Early discharge concerns",
     hiTitle: "जल्दी स्खलन से जुड़ी चिंता",
-    image: "/images/concern-discharge.jpg"
+    image: "/images/concern-discharge.png"
   },
   {
     enTitle: "Erection-related concerns",
     hiTitle: "इरेक्शन से संबंधित चिंता",
-    image: "/images/concern-erection.jpg"
+    image: "/images/concern-erection.png",
+    objectPosition: "center 20%"
   },
   {
     enTitle: "Desire, energy, and vitality concerns",
     hiTitle: "इच्छा, ऊर्जा और जीवंतता से जुड़ी चिंताएँ",
-    image: "/images/concern-desire.jpg"
+    image: "/images/concern-desire.png"
   },
   {
     enTitle: "Stress, sleep and lifestyle factors affecting wellbeing",
     hiTitle: "तनाव, नींद और जीवनशैली के प्रभाव",
-    image: "/images/concern-lifestyle.jpg"
+    image: "/images/concern-lifestyle.png"
   }
 ];
 
@@ -34,22 +36,28 @@ const medicalSystemPillars = [
   {
     enTitle: "Whole-routine perspective through Ayurveda",
     hiTitle: "आयुर्वेद के माध्यम से पूरी दिनचर्या पर ध्यान",
-    desc: "Focusing on constitution (Prakriti), sleep cycle, and dietary habits."
+    desc: "Focusing on constitution (Prakriti), sleep cycle, and dietary habits.",
+    image: "/images/pillar-ayurveda.png"
   },
   {
     enTitle: "Individual case-based consideration for Homeopathy",
     hiTitle: "होम्योपैथी के लिए व्यक्तिगत केस-आधारित विचार",
-    desc: "Targeted, highly specific natural dilutions based on unique context."
+    desc: "Targeted, highly specific natural dilutions based on unique context.",
+    image: "/images/pillar-homeopathy.png",
+    objectPosition: "center 58%"
   },
   {
     enTitle: "Personalised conversation before any treatment recommendation",
     hiTitle: "किसी भी उपचार सलाह से पहले व्यक्तिगत बातचीत",
-    desc: "No auto-generated prescription. Speak to a real human practitioner."
+    desc: "No auto-generated prescription. Speak to a real human practitioner.",
+    image: "/images/pillar-conversation.png"
   },
   {
     enTitle: "Focus on responsible, sustainable daily habits",
     hiTitle: "जिम्मेदार और टिकाऊ दैनिक आदतों पर ध्यान",
-    desc: "Long term health recovery built on everyday routine changes."
+    desc: "Long term health recovery built on everyday routine changes.",
+    image: "/images/pillar-habits.png",
+    objectPosition: "center 60%"
   }
 ];
 
@@ -84,6 +92,7 @@ const Solutions: React.FC = () => {
                     src={concern.image}
                     alt={concern.enTitle}
                     className={styles.concernCardImage}
+                    style={{ objectPosition: concern.objectPosition || 'center' }}
                   />
                 </div>
                 <div className={styles.concernCardContent}>
@@ -121,14 +130,20 @@ const Solutions: React.FC = () => {
           <div className={styles.pillarsGrid}>
             {medicalSystemPillars.map((pillar, idx) => (
               <div key={idx} className={styles.pillarCard}>
-                <div className={styles.pillarHeader}>
+                <div className={styles.pillarCardImageWrapper}>
+                  <img
+                    src={pillar.image}
+                    alt={pillar.enTitle}
+                    className={styles.pillarCardImage}
+                    style={{ objectPosition: pillar.objectPosition || 'center' }}
+                  />
                   <div className={styles.pillarBadge}>0{idx + 1}</div>
-                  <div>
-                    <h4 className={styles.pillarEnTitle}>{pillar.enTitle}</h4>
-                    <h4 className={styles.pillarHiTitle}>{pillar.hiTitle}</h4>
-                  </div>
                 </div>
-                <p className={styles.pillarDesc}>{pillar.desc}</p>
+                <div className={styles.pillarCardContent}>
+                  <h4 className={styles.pillarEnTitle}>{pillar.enTitle}</h4>
+                  <h4 className={styles.pillarHiTitle}>{pillar.hiTitle}</h4>
+                  <p className={styles.pillarDesc}>{pillar.desc}</p>
+                </div>
               </div>
             ))}
           </div>
