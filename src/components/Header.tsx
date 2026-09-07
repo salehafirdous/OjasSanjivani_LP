@@ -15,9 +15,9 @@ const Header: React.FC = () => {
             </span>
           </div>
           <div className={styles.topbarActions}>
-            <a href="tel:+8805703125" className={styles.phoneLink}>
+            <a href="tel:+918805703125" className={styles.phoneLink}>
               <Phone size={14} />
-              <span>+91 8805703125</span>
+              <span>+918805703125</span>
             </a>
           </div>
         </div>
@@ -38,9 +38,9 @@ const Header: React.FC = () => {
           </nav>
 
           <div className={styles.headerRight}>
-            <a href="tel:+8805703125" className={styles.contactPill}>
+            <a href="tel:+918805703125" className={styles.contactPill}>
               <Phone size={16} className={styles.phoneIcon} />
-              <span>+8805703125</span>
+              <span>+918805703125</span>
             </a>
             <a href="#lead-form-section" className="btn-primary">
               <span className={styles.desktopBtnText}>Book Free Consultation</span>
